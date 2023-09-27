@@ -19,7 +19,7 @@ set_vamp_variable <- function(os) {
 set_windows <- function() {
 
   # package library path
-  pkg_path <- system.file('bin/windows64', package = 'pyin')
+  pkg_path <- system.file('bin/windows64', package = 'vampr')
 
   # in case the user already has VAMP plugins installed
 
@@ -38,7 +38,7 @@ set_windows <- function() {
 set_osx <- function() {
 
   # package library path
-  pkg_path <- system.file('bin/osx', package = 'pyin')
+  pkg_path <- system.file('bin/osx', package = 'vampr')
 
   # in case the user already has VAMP plugins installed
 
@@ -60,7 +60,7 @@ set_osx <- function() {
 set_linux <- function() {
 
   # package library path
-  pkg_path <- system.file('bin/linux64', package = 'pyin')
+  pkg_path <- system.file('bin/linux64', package = 'vampr')
 
   # in case the user already has VAMP plugins installed
 
