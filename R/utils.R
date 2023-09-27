@@ -135,3 +135,15 @@ sonic_annotator_construct_command <- function(args, hidePrint = TRUE, os) {
                       stdout = TRUE)
   }
 }
+
+
+list_vamp_plugins <- function() {
+
+  op_sys <- get_os()
+
+  if(op_sys %in% c("osx", "linux", "windows")) {
+    set_vamp_variable(op_sys)
+  }
+
+  sonic_annotator_construct_command(args = "-l", os = op_sys)
+}

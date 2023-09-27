@@ -71,5 +71,5 @@ test_onset_detection <- function() {
   onset_detection(file_name = system.file('test_audio/test_drum.mp3', package = 'vampr') )
 }
 
-# t <- test_onset_detection()
 
+# t <- test_onset_detection()
