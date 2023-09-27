@@ -147,3 +147,5 @@ list_vamp_plugins <- function() {
 
   sonic_annotator_construct_command(args = "-l", os = op_sys)
 }
+
+# t <- list_vamp_plugins()
