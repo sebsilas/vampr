@@ -34,8 +34,7 @@ onset_detection <- function(file_name,
     sa_out <- sonic_annotator_construct_command(args, hidePrint, op_sys)
 
     if(length(sa_out) == 0) {
-      # res <- py
-      in_handle_null(type, file_name)
+      # res <- pyin_handle_null(type, file_name)
     } else {
 
       res <- read.csv(text = sa_out, header = FALSE) %>%
