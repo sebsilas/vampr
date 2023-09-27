@@ -69,7 +69,7 @@ tidy_onset_detection <- function(res) {
 }
 
 test_onset_detection <- function(vamp_cmd) {
-  system2("vamp:qm-vamp-plugins:qm-onsetdetector:onsets")
+  system2("vamp:vamp-example-plugins:percussiononsets:onsets")
   onset_detection(file_name = system.file('test_audio/test_drum.mp3', package = 'vampr') )
 }
 
