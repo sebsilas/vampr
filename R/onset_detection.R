@@ -35,6 +35,7 @@ onset_detection <- function(file_name,
 
     if(length(sa_out) == 0) {
       # res <- pyin_handle_null(type, file_name)
+      res <- NA
     } else {
 
       res <- read.csv(text = sa_out, header = FALSE) %>%
