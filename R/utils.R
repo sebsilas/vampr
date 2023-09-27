@@ -84,7 +84,6 @@ sonic_annotator_construct_args <- function(transform_file, vamp_cmd, file_name, 
               "csv --csv-stdout")
   } else {
     args <- c(paste0('-t ', transform_file),
-              vamp_cmd,
               file_name,
               "-w",
               "csv --csv-stdout")
