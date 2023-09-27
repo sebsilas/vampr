@@ -113,7 +113,7 @@ get_os <- function(){
   tolower(os)
 }
 
-sonic_annotator_construct_command <- function(args, hidePrint = TRUE, os) {
+sonic_annotator_construct_command <- function(args, hidePrint = TRUE, os = get_os() ) {
 
   if(os == "osx") {
     cmd <- system.file('bin/osx/sonic-annotator', package = 'vampr')
@@ -147,5 +147,17 @@ list_vamp_plugins <- function() {
 
   sonic_annotator_construct_command(args = "-l", os = op_sys)
 }
+
+
+create_plugin_skeleton <- function(plugin_output,
+                                   file_name = paste0(gsub(":", "-", plugin_output), "_skeleton.n3")) {
+
+  args <-  paste0("-s ", plugin_output, " > ", file_name)
+
+  sonic_annotator_construct_command(args)
+
+}
+
+# create_plugin_skeleton("vamp:qm-vamp-plugins:qm-onsetdetector:onsets")
 
 # t <- list_vamp_plugins()

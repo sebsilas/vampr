@@ -29,7 +29,8 @@ onset_detection <- function(file_name,
 
     set_vamp_variable(op_sys)
 
-    args <- sonic_annotator_construct_args(transform_file, vamp_cmd = "vamp:qm-vamp-plugins:qm-onsetdetector:onsets", file_name, normalise)
+    args <- sonic_annotator_construct_args(transform_file,
+                                           vamp_cmd = "vamp:qm-vamp-plugins:qm-onsetdetector:onsets", file_name, normalise)
 
     sa_out <- sonic_annotator_construct_command(args, hidePrint, op_sys)
 
@@ -67,7 +68,8 @@ tidy_onset_detection <- function(res) {
     dplyr::rename(onset = V2)
 }
 
-test_onset_detection <- function() {
+test_onset_detection <- function(vamp_cmd) {
+  system2("vamp:qm-vamp-plugins:qm-onsetdetector:onsets")
   onset_detection(file_name = system.file('test_audio/test_drum.mp3', package = 'vampr') )
 }
 
